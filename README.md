@@ -6,7 +6,7 @@ Please submit bug reports [in GitHub](https://github.com/jstjoe/zdapps_segment/i
 
 ## Release History
 
-*0.1* Initial release. Includes support for identify & group methods (in one call) and the track method. Still a little disorganized.
+**0.1** Initial release. Includes support for identify & group methods (in one call) and the track method. Still a little disorganized.
 
 ## The following information is displayed:
 
