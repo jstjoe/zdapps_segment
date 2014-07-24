@@ -3,7 +3,7 @@
   return {
     events: {
       'app.created':'onAppCreated',
-      'click .segment':'trackClick'
+      'click .segment':'trackClick' // example: this event says to track the click (with a named function below) when the user clicks an element with class "segment"
     },
     requests: {
       // segment requests
@@ -19,8 +19,10 @@
       // end segment requests
     },
     onAppCreated: function() {
+      // this includes and then instantiates the segment module so it can be accessed with this.segment and still gets the global context
       var Segment = require('segment/segment.js');
       this.segment = new Segment(this);
+
       // this.segment.identifyAndGroup() generates a unique ID for the current user (subdomain+zd_user_id), and associates the user with a group identified by subdomain
       // it also records some associated metadata defined in segment.js. 
       // Users: name, email, id, subdomain, locale
